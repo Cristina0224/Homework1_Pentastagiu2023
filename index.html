@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 1</title>
+    <script src="dialog.js" defer type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+    <!--See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog-->
+  </head>
+  <body>
+    <dialog id="taskDialog" >
+      <form id="taskForm">
+        <p>
+          <label>
+            Title:
+            <input type="text" name="title"   maxlength="50" pattern="[A-Za-z0-9]+" title="Only alphanumeric characters are allowed, maximum 50 characters">
+          </label>
+          </p>
+          <p>
+            <label>
+            Description:
+            <textarea name="description" maxlength="250" ></textarea>
+          </label>
+        </p>
+          <p>
+            <label>
+            Assignee:
+            <input type="email" name="assignee" >
+          </label>
+        </p>
+        <div>
+          <button value="cancel" formmethod="dialog">Cancel</button>
+          <button id="confirmBtn" value="default" type="submit">Confirm</button>  
+        </div>
+      </form>
+    </dialog>
+   <div class="center">
+    <h1 class="title">Tasks Management</h1>
+    <p>
+      <button id="showDialog" class="add">Add a task</button>
+    </p>
+    <div>
+        <h2>In Progress Tasks</h2>
+        <ul id="inProgressTasks"></ul>
+      </div>
+      <div>
+        <h2>Completed Tasks</h2>
+        <ul id="completedTasks"></ul>
+      </div>
+    </div>
+      </body>
+    <output></output>
+  </body>
+</html>
